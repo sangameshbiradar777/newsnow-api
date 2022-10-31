@@ -26,7 +26,5 @@ app.get('/getnews/', (req, res) => {
   })
 })
 
-const PORT = 5000;
-
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+app.listen(process.env.PORT || 3000, () => console.log(`Server is running`));
 
