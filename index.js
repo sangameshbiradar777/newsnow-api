@@ -7,10 +7,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 5000;
-
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
-
 app.get('/', (req, res) => {
   res.send('Hello from news now Express server')
 })
@@ -24,10 +20,13 @@ app.get('/getnews/', (req, res) => {
   }}).then(data => {
     // data.header("Access-Control-Allow-Origin", "http://localhost:5500");
     console.log(data);
-    res.send(data);
+    return data.json();
   }).then(data => {
-    console.log(data);
-    // res.send(data);
+    res.json(data);
   })
 })
+
+const PORT = 5000;
+
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
