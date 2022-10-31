@@ -11,8 +11,8 @@ app.get('/', (req, res) => {
   res.send('Hello from news now Express server')
 })
 
-app.get('/getnews/', (req, res) => {
-  const URL = 'https://guarded-beach-97677.herokuapp.com/' + 'https://newsapi.org/v2/everything?q=sbi&searchIn=title&language=en&page=1&pageSize=10&apiKey=f8020bac276b4c698fc5282bb4e2b702';
+app.get('/getnews/:url', (req, res) => {
+  const URL = 'https://guarded-beach-97677.herokuapp.com/' + req.params.url;
   // res.send(URL)
   fetch(URL, {headers: {
     'origin': 'http://localhost:5000',
@@ -22,7 +22,7 @@ app.get('/getnews/', (req, res) => {
     console.log(data);
     return data.json();
   }).then(data => {
-    res.json(data);
+    res.send(data);
   })
 })
 
