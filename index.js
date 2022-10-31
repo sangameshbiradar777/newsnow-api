@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/getnews/', (req, res) => {
-  const URL = 'https://guarded-beach-97677.herokuapp.com/' + 'https://newsapi.org/v2/everything?q=sbi&searchIn=title&language=en&page=1&pageSize=10&apiKey=b720fe057ca34e46809d9e53a42ac6bd';
+  const URL = 'https://guarded-beach-97677.herokuapp.com/' + 'https://newsapi.org/v2/everything?q=sbi&searchIn=title&language=en&page=1&pageSize=10&apiKey=f8020bac276b4c698fc5282bb4e2b702';
   // res.send(URL)
   fetch(URL, {headers: {
     'origin': 'http://localhost:5000',
