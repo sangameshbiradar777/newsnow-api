@@ -1,0 +1,20 @@
+{
+  "name": "newsnow-api",
+  "version": "1.0.0",
+  "description": "NewsNow api ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "startDev": "nodemon index.js"
+  },
+  "author": "Sangamesh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^3.2.10",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
