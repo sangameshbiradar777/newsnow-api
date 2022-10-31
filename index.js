@@ -22,6 +22,7 @@ app.get('/getnews/:url', (req, res) => {
     console.log(data);
     return data.json();
   }).then(data => {
+    console.log(data);
     res.send(data);
   })
 })
